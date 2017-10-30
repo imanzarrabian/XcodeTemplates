@@ -6,7 +6,7 @@ This is a copy of Apple's built in Single View Application template enhanced wit
 
 ## Projects Templates installation
 
-Copy the One More Thing Studio folder into the template folder in XcodeTemplates
+Copy the One More Thing Studio folder into the template folder in XcodeTemplates, for Xcode 9 located at 
 ```shell
 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project Templates/iOS
 ```
