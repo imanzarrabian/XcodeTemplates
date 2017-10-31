@@ -4,7 +4,7 @@
 
 This is a copy of Apple's built in Single View Application template enhanced with SwiftLint. The template adds the mandatory Run Script and the .swiftlint.yml configuration file to the project.
 
-## Projects Templates installation
+## Project Templates installation
 
 Copy the One More Thing Studio folder into the template folder in XcodeTemplates, for Xcode 9 located at
 ```shell
