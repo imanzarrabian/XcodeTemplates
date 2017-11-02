@@ -84,7 +84,6 @@ implicit_return:
     severity: warning
 implicitly_unwrapped_optional:
       severity: warning
-line_length: 300
 trailing_closure:
       severity: warning
 type_body_length:
