@@ -1,7 +1,10 @@
 disabled_rules: # rule identifiers to exclude from running
   - control_statement
+  - line_length
+  - conditional_binding_cascade
 opt_in_rules: # some rules are only opt-in
   - empty_count
+  - missing_docs
   # Find all the available rules by running:
   # swiftlint rules
 excluded: # paths to ignore during linting. Takes precedence over `included`.
@@ -48,6 +51,8 @@ implicit_return:
 implicitly_unwrapped_optional:
       severity: warning
 line_length: 300
+trailing_closure:
+      severity: warning
 type_body_length:
   - 300 # warning
   - 400 # error
