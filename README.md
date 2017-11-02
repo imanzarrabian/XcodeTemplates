@@ -19,6 +19,9 @@ install.sh {optional_install_directory_name} #e.g install.sh MyPersonalTemplates
 ```
 Relaunch Xcode
 
+
+![OMTS Single View App Template with SwiftLint](https://raw.githubusercontent.com/OMTS/XcodeTemplates/master/xcodetemplate.png)
+
 ## Note
 
 You may need to install SwiftLint using Homebrew (cocoapods installation of swiftlint is not supported for now):
