@@ -24,7 +24,7 @@ Relaunch Xcode
 
 ## Note
 
-You may need to install SwiftLint using Homebrew (cocoapods installation of swiftlint is not supported for now):
+You may need to install SwiftLint using Homebrew (This template does not support the cocoapods installation of swiftlint yet):
 ```shell
 brew install swiftlint
 ```
