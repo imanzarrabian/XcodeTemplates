@@ -12,6 +12,13 @@ Copy the One More Thing Studio folder into the template folder in XcodeTemplates
 ```
 Relaunch Xcode
 
+
+An alternative approach is to use the installation script (which works only for Xcode 9) which gives you the opportunity the rename the template folder as well.
+```shell
+install.sh {optional_install_directory_name} #e.g install.sh MyPersonalTemplates
+```
+Relaunch Xcode
+
 ## Note
 
 You may need to install SwiftLint using Homebrew (cocoapods installation of swiftlint is not supported for now):
@@ -25,13 +32,21 @@ Here are the rules adopted by the template
 To customize these rules you can either create a pull request on the .yml file or update the file directly in your projet
 
 ```yaml
-disabled_rules:
+disabled_rules: # rule identifiers to exclude from running
   - control_statement
-opt_in_rules:
+  - line_length
+  - conditional_binding_cascade
+opt_in_rules: # some rules are only opt-in
   - empty_count
-excluded:
+  - missing_docs
+  # Find all the available rules by running:
+  # swiftlint rules
+excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Carthage
   - Pods
+
+# configurable rules can be customized from this configuration file
+# binary rules can set their severity level
 attributes:
     severity: warning
 colon:
@@ -58,9 +73,9 @@ first_where:
     severity: warning
 for_where:
     severity: warning
-force_cast: warning
+force_cast: warning # implicitly
 force_try:
-  severity: warning
+  severity: warning # explicitly
 force_unwrapping:
     severity: warning
 implicit_getter:
@@ -70,26 +85,28 @@ implicit_return:
 implicitly_unwrapped_optional:
       severity: warning
 line_length: 300
+trailing_closure:
+      severity: warning
 type_body_length:
-  - 300
-  - 400
+  - 300 # warning
+  - 400 # error
 file_length:
   warning: 500
   error: 1200
 type_name:
-  min_length: 4
-  max_length:
+  min_length: 4 # only warning
+  max_length: # warning and error
     warning: 40
     error: 50
-  excluded: iPhone
+  excluded: iPhone # excluded via string
 identifier_name:
-  min_length:
-    error: 2
-  excluded:
+  min_length: # only min_length
+    error: 2 # only error
+  excluded: # excluded via string array
     - id
     - x
     - y
     - z
-reporter: "xcode"
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji)
 ```
-[See SwiftLint for the exhaustive list of rules](https://github.com/realm/SwiftLint/blob/master/Rules.md) 
+[See SwiftLint for the exhaustive list of rules](https://github.com/realm/SwiftLint/blob/master/Rules.md)
